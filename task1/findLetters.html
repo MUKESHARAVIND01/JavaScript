@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    input{
+      
+       margin-bottom: 10px;
+       }
+    
+</style>
+</head>
+<body>
+    <div>
+        <h2>Search letter</h2>
+        <input type="text" id="fullValue"> <br>
+        <input type="text" id="needValue">
+        <button onclick="searchLetter()">Search</button>
+        <h2 id="result"></h2>
+</div>
+
+<script>
+  
+   
+
+    function searchLetter()
+        {
+            let words=document.getElementById("fullValue").value;
+            let letters=document.getElementById("needValue").value;
+            let showResult=document.getElementById("result");
+            
+            
+            // in seach method ,when letter and its order are correct, return positive number with that letter starting index  
+            // as same letter position changed it give -1;
+
+           // showResult.innerHTML= (words.search(letters)!==-1)?"true":"false";  
+           
+          
+          //string aravind
+
+          console.log("words :"+words);
+          console.log("letters :"+letters);
+             
+             for(let i=0;i<words.length;i++)
+             {
+
+                let a="";
+                for(let j=0;j<letters.length;j++)
+                {
+                    a+=words[i+j];
+
+                    if(a==letters)
+                    {
+                        return showResult.innerHTML = "true";
+                       
+                    }
+                }
+            
+            }
+           return showResult.innerHTML = "false";
+          
+              
+               
+            
+               
+          
+
+          
+          
+        }
+        
+</script>
+</body>
+</html>

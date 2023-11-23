@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Reverse String question</h2>
+    <input type="text" id="Input" placeholder="Enter string">
+    <button id="add" >process</button>
+    <p id="result"></p>
+    <button onclick="history.back()">Go Back</button>
+
+    <script>
+        let add=document.getElementById("add");
+        add.addEventListener("click",reverse);
+
+        function reverse()
+        {
+            let userInput=document.getElementById("Input").value;
+            
+            let show=document.getElementById("result");
+            var reverse="";
+
+            for(let i=userInput.length-1;i>=0;i--)
+            {
+                 reverse+=userInput[i];
+            }
+            console.log(reverse);
+            
+            show.innerHTML=reverse;
+
+            for(let i=0;i<reverse.length;i++)
+            {
+                if(userInput[i]!=reverse[i])
+                {
+                    console.log("name");
+                    return show.innerHTML += `<p>not palindrom</p>`;
+                }
+
+            }
+            return show.innerHTML+=` <p>palindrom</p>`;
+            
+
+
+        }
+        
+
+    </script>
+
+
+    
+</body>
+</html>

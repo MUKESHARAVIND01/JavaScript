@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Guess Number Game</title>
+    </head>
+
+    <body>
+        <h1>GUESS NUMBER GAME</h1>
+        <input type="text" id="guessNumber" id="guessnum" placeholder="ENTER YOUR GUESS NUM ">
+        <button onclick="check()">SUBMIT</button>
+
+       <P id="showRanNum"></P>
+        <P id="result">YOUR GUESS IS WRONG/WRITE</P>
+        
+
+
+        <!-- script -->
+        <script>
+
+            // access html element
+             var guessNum=document.getElementById("guessNumber");
+             var result=document.getElementById("result");
+             var RandomNum=document.getElementById("showRanNum");
+             
+             alert("hi");
+             prompt("enter number");
+             // generate random number
+             randomNum=Math.floor(Math.random()*10);
+             function check()
+             {
+                
+                //input value
+                var enteredNum=guessNum.value;
+    
+                if(enteredNum==randomNum) // input value== genarate value
+                {
+                    
+                    // show output in browseR
+                    result.innerHTML="YOU ARE CORRECT";
+                    alert("YOU WON");
+                }
+                else
+                {
+                    // IF YOU ARE WRONG FOR YOUR REFERENCE SHOW THE GENERATE NUMBER.
+                    RandomNum.innerHTML="Random number is: "+ randomNum;
+                    result.innerHTML="YOU ARE WRONG";
+                }
+                var enteredNum=
+                
+             }
+        </script>
+    </body>
+</html>

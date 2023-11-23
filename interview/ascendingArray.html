@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>ascending Array</h2>
+
+    <script>
+
+        function ascending(arr)
+        {
+            for(let i=0;i<arr.length;i++)
+            {
+                for(let j=i+1;j<arr.length;j++)
+                {
+                    if(arr[i]>arr[j])
+                    {
+                        let temp=arr[i];
+                        arr[i]=arr[j];
+                        arr[j]=temp;
+                    }
+                    
+                }
+            }
+            console.log( "Ascending array : "+arr);
+
+        }
+
+        function decending(arr)
+        {
+            
+            for(let i=0;i<arr.length;i++)
+            {
+                for(let j=i+1;j<arr.length;j++)
+                {
+                    if(arr[i]<arr[j])
+                    {
+                        let temp=arr[i];
+                        arr[i]=arr[j];
+                        arr[j]=temp;
+                    }
+                    
+                }
+            }
+            console.log("Decending array: "+arr);
+
+        }
+        ascending([9,3,45,5,7,4]);  
+        decending([9,3,45,5,7,4]) ;
+     </script>
+</body>
+</html>

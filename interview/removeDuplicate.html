@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function removeDupli(a){
+            let noOfDuplicate=0;
+            let noOfUnique=0;
+            for(let i=0;i<a.length;i++)
+            {
+                let unique=true;
+              for(let j=0;j<i;j++)
+              {
+                if(a[i]==a[j])
+                {
+                   unique=false;
+                   noOfDuplicate++
+                    break;
+                }
+              } 
+              if(unique)
+              {
+                noOfUnique++;
+                console.log(a[i]);
+              }
+
+            }
+            console.log("noOfUnique  is : "+noOfUnique);
+            console.log("noOfDuplicate is: "+noOfDuplicate);
+        }
+        removeDupli( [10,20,3,2,3,4,10]);
+    </script>
+</body>
+</html>

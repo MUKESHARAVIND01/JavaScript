@@ -1,0 +1,58 @@
+<!-- if odd number it give green color or red it will be even -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .odd
+    {
+       
+       color:green;
+    }
+    .even
+    {
+        background-color:red;
+    }
+   
+</style>
+<body>
+    <div>
+       
+        <h1>color change</h1>
+        <!--   -->
+        <input oninput="show()" type="text" id="inputValue"> 
+        <p  id="show"></p>
+    
+    </div>
+    
+    <script>
+      
+        function show()
+        {
+            //get value from user enter value
+            let getValue=document.getElementById("inputValue").value;
+            //show value enter by user
+            let showValue=document.getElementById("show");
+            //value shows in webpage
+
+           // showValue.innerHTML=getValue;
+              console.log(getValue)
+
+              showValue.classList.remove("even", "odd"); // when user delt the number it will remove odd or even
+             //(getValue%2===0)?showValue.classList.add("even"):showValue.classList.add("odd");  //add css class in js by 'classList.add(//css class name)'
+             (getValue%2===0)?showValue.innerHTML=`<span style="color: green;">${getValue}</span>`:showValue.innerHTML=`<span style="color: red;">${getValue}</span>`
+ }  
+ 
+ </script>
+</body>
+</html>

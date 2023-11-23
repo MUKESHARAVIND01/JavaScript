@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function duplicate(a)
+        {
+            let count=0;
+
+            for(let i=0;i<a.length;i++)
+            {
+                for(let j=0;j<i;j++)
+                {
+                    if(a[i]==a[j])
+                    {
+                        console.log(a[i]);
+                        count++;
+                    }
+                }
+            }
+            console.log("no.of. dupplicate:"+count)
+        }
+        duplicate([10,20,3,2,3,4,10]);
+    </script>
+</body>
+</html>

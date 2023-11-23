@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table
+    {
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+
+   th
+   {
+    border: 2px solid black;
+        border-collapse: collapse;
+   }
+    td{
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+    h1,div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>
+<body>
+    <h1 >insert array object in table </h1>
+    <div id="table" ></div>
+    <!-- <table id="table">
+       
+      
+    </table> -->
+
+    <script>
+        var student=[{name:"mukesh",age:23,city:"Ooty"},{name:"sathish",age:24,city:"chennai"},{name:"ashok",age:23,city:"chennai"},{name:"sathish",age:24,city:"chennai"}];
+     
+       /* var table=document.createElement("table");
+        var table = document.getElementById("table");
+        var tHead=document.createElement("tr")
+
+        var thead1=document.createElement("th");
+        thead1.innerHTML="S.No";
+        tHead.appendChild(thead1)
+
+        var thead2=document.createElement("th");
+        thead2.innerHTML="Name";
+        tHead.appendChild(thead2);
+
+        var thead3=document.createElement("th");
+        thead3.innerHTML="  Age";
+        tHead.appendChild(thead3);
+
+        var thead4=document.createElement("th");
+        thead4.innerHTML="City";
+        tHead.appendChild(thead4)
+        
+        table.appendChild(tHead); 
+       
+
+  for(let i=0;i<student.length;i++)
+       
+        {
+            /*var tRow=document.createElement("tr");
+
+            var tdSNo = document.createElement("td");
+            tdSNo.innerHTML = i + 1;
+           
+            var tdName=document.createElement("td");
+            tdName.innerHTML=student[i].name;
+          
+            var tdAge=document.createElement("td");
+            tdAge.innerHTML=student[i].age;
+
+            var tdCity=document.createElement("td");
+            tdCity.innerHTML=student[i].city; 
+        
+                    
+          tRow.appendChild(tdSNo);
+            tRow.appendChild(tdName);
+            tRow.appendChild(tdAge);
+            tRow.appendChild(tdCity);
+
+
+            table.appendChild(tRow); 
+        
+
+  document.body.append(table);*/
+
+
+
+  /*let value=`<table>
+    <th>name</th>
+    <th>age</th></tr>`
+    for(let i=0;i<student.length;i++)
+       
+    {
+        value+=`
+        <td>${student[i].name}</td>
+        <td>${student[i].age}</td></tr>`
+    }
+  value+='</table>'
+  document.getElementById("table").innerHTML+=value*/
+
+  var table=document.getElementById("table");
+
+  let values =`<table>
+             <tr>
+                <th>SNo</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+             </tr>`
+
+             for(let i=0;i<student.length;i++)
+             {
+                values+=`<tr>
+                    <td> ${[i+1]}</td>
+                    <td> ${student[i].name}</td>
+                    <td> ${student[i].age}</td>
+                    <td> ${student[i].city}</td>
+                </tr>`
+             }
+ values+=`</table>`;
+  table.innerHTML+=values;
+        
+   </script>
+</body>
+</html>
